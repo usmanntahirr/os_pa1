@@ -1,0 +1,486 @@
+
+Discarded input sections
+
+ .group         0x00000000        0xc init/test_kbd.o
+ .debug_macro   0x00000000      0x850 init/test_kbd.o
+ .group         0x00000000        0xc init/test_shell.o
+ .debug_macro   0x00000000      0x850 init/test_shell.o
+ .group         0x00000000        0xc init/test_syscalls.o
+ .debug_macro   0x00000000      0x850 init/test_syscalls.o
+ .group         0x00000000        0xc init/test_tty.o
+ .debug_macro   0x00000000      0x850 init/test_tty.o
+ .group         0x00000000        0xc init/test_vga.o
+ .debug_macro   0x00000000      0x850 init/test_vga.o
+ .group         0x00000000        0xc testmain.o
+ .group         0x00000000        0xc testmain.o
+ .group         0x00000000        0xc testmain.o
+ .group         0x00000000        0xc testmain.o
+ .group         0x00000000        0xc testmain.o
+ .group         0x00000000        0xc testmain.o
+ .group         0x00000000        0xc testmain.o
+ .debug_macro   0x00000000      0x850 testmain.o
+ .debug_macro   0x00000000       0x88 testmain.o
+ .debug_macro   0x00000000       0x22 testmain.o
+ .debug_macro   0x00000000       0x16 testmain.o
+ .debug_macro   0x00000000       0x16 testmain.o
+ .debug_macro   0x00000000       0x3a testmain.o
+ .debug_macro   0x00000000       0x22 testmain.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD init/test_interrupts.o
+LOAD init/test_kbd.o
+LOAD init/test_shell.o
+LOAD init/test_syscalls.o
+LOAD init/test_tty.o
+LOAD init/test_vga.o
+LOAD testmain.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rel.text
+ *(.rel.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rel.ifunc
+ *(.rel.ifunc)
+
+.rel.plt
+ *(.rel.plt)
+
+.relr.dyn
+ *(.relr.dyn)
+
+.init
+ *(SORT_NONE(.init))
+
+.plt
+ *(.plt)
+
+.plt.got
+ *(.plt.got)
+
+.plt.sec
+ *(.plt.sec)
+
+.text           0x00000000      0x5aa
+ *(.text .stub)
+ .text          0x00000000        0x0 init/test_interrupts.o
+ .text          0x00000000        0x0 init/test_kbd.o
+ .text          0x00000000        0x0 init/test_shell.o
+ .text          0x00000000        0x0 init/test_syscalls.o
+ .text          0x00000000        0x0 init/test_tty.o
+ .text          0x00000000      0x48a init/test_vga.o
+                0x0000003c                test_vga_entry
+                0x00000117                test_vga_cursor
+                0x00000217                test_vga_entry_overwrite
+                0x0000031d                test_vga_entry_colors
+                0x000003c9                test_vga_entry_boundaries
+ .text          0x0000048a      0x120 testmain.o
+                0x0000048a                start_tests
+                0x0000051b                read_command
+                0x00000586                send_msg
+ *(.gnu.warning)
+
+.fini
+ *(SORT_NONE(.fini))
+
+.rodata         0x00000000      0x123
+ *(.rodata)
+ .rodata        0x00000000      0x113 init/test_vga.o
+ .rodata        0x00000113       0x10 testmain.o
+
+.rodata1
+ *(.rodata1)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame       0x00000000      0x174
+ *(.eh_frame)
+ .eh_frame      0x00000000      0x100 init/test_vga.o
+ .eh_frame      0x00000100       0x74 testmain.o
+
+.sframe
+ *(.sframe)
+
+.gcc_except_table
+ *(.gcc_except_table)
+
+.gnu_extab
+ *(.gnu_extab*)
+
+.exception_ranges
+ *(.exception_ranges)
+
+.eh_frame
+ *(.eh_frame)
+
+.sframe
+ *(.sframe)
+
+.gnu_extab
+ *(.gnu_extab)
+
+.gcc_except_table
+ *(.gcc_except_table)
+
+.exception_ranges
+ *(.exception_ranges)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got)
+
+.got.plt
+ *(.got.plt)
+
+.data           0x00000000        0x0
+ *(.data)
+ .data          0x00000000        0x0 init/test_interrupts.o
+ .data          0x00000000        0x0 init/test_kbd.o
+ .data          0x00000000        0x0 init/test_shell.o
+ .data          0x00000000        0x0 init/test_syscalls.o
+ .data          0x00000000        0x0 init/test_tty.o
+ .data          0x00000000        0x0 init/test_vga.o
+ .data          0x00000000        0x0 testmain.o
+
+.data1
+ *(.data1)
+
+.bss            0x00000000       0x88
+ *(.bss)
+ .bss           0x00000000        0x0 init/test_interrupts.o
+ .bss           0x00000000        0x0 init/test_kbd.o
+ .bss           0x00000000        0x0 init/test_shell.o
+ .bss           0x00000000        0x0 init/test_syscalls.o
+ .bss           0x00000000        0x0 init/test_tty.o
+ .bss           0x00000000        0x0 init/test_vga.o
+ .bss           0x00000000       0x88 testmain.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000      0x134
+ *(.comment)
+ .comment       0x00000000       0x2c init/test_interrupts.o
+ .comment       0x0000002c       0x2c init/test_kbd.o
+ .comment       0x00000058       0x2c init/test_shell.o
+ .comment       0x00000084       0x2c init/test_syscalls.o
+ .comment       0x000000b0       0x2c init/test_tty.o
+ .comment       0x000000dc       0x2c init/test_vga.o
+ .comment       0x00000108       0x2c testmain.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc init/test_interrupts.o
+
+.note.GNU-stack
+                0x00000000        0x0
+ .note.GNU-stack
+                0x00000000        0x0 init/test_interrupts.o
+ .note.GNU-stack
+                0x00000000        0x0 init/test_kbd.o
+ .note.GNU-stack
+                0x00000000        0x0 init/test_shell.o
+ .note.GNU-stack
+                0x00000000        0x0 init/test_syscalls.o
+ .note.GNU-stack
+                0x00000000        0x0 init/test_tty.o
+ .note.GNU-stack
+                0x00000000        0x0 init/test_vga.o
+ .note.GNU-stack
+                0x00000000        0x0 testmain.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc init/test_vga.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc init/test_vga.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc init/test_vga.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc init/test_vga.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc init/test_vga.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc init/test_vga.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc init/test_vga.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc init/test_vga.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc testmain.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc testmain.o
+
+.group          0x00000000        0xc
+ .group         0x00000000        0xc testmain.o
+
+.gnu.build.attributes
+ *(.gnu.build.attributes)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0xb8
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x18 init/test_interrupts.o
+ .debug_aranges
+                0x00000018       0x18 init/test_kbd.o
+ .debug_aranges
+                0x00000030       0x18 init/test_shell.o
+ .debug_aranges
+                0x00000048       0x18 init/test_syscalls.o
+ .debug_aranges
+                0x00000060       0x18 init/test_tty.o
+ .debug_aranges
+                0x00000078       0x20 init/test_vga.o
+ .debug_aranges
+                0x00000098       0x20 testmain.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000      0x6a6
+ *(.debug_info)
+ .debug_info    0x00000000       0x21 init/test_interrupts.o
+ .debug_info    0x00000021       0x21 init/test_kbd.o
+ .debug_info    0x00000042       0x21 init/test_shell.o
+ .debug_info    0x00000063       0x21 init/test_syscalls.o
+ .debug_info    0x00000084       0x21 init/test_tty.o
+ .debug_info    0x000000a5      0x3bd init/test_vga.o
+ .debug_info    0x00000462      0x244 testmain.o
+
+.debug_abbrev   0x00000000      0x2f9
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000       0x13 init/test_interrupts.o
+ .debug_abbrev  0x00000013       0x13 init/test_kbd.o
+ .debug_abbrev  0x00000026       0x13 init/test_shell.o
+ .debug_abbrev  0x00000039       0x13 init/test_syscalls.o
+ .debug_abbrev  0x0000004c       0x13 init/test_tty.o
+ .debug_abbrev  0x0000005f      0x133 init/test_vga.o
+ .debug_abbrev  0x00000192      0x167 testmain.o
+
+.debug_line     0x00000000      0x711
+ *(.debug_line)
+ .debug_line    0x00000000       0x38 init/test_interrupts.o
+ .debug_line    0x00000038       0x31 init/test_kbd.o
+ .debug_line    0x00000069       0x33 init/test_shell.o
+ .debug_line    0x0000009c       0x36 init/test_syscalls.o
+ .debug_line    0x000000d2       0x31 init/test_tty.o
+ .debug_line    0x00000103      0x343 init/test_vga.o
+ .debug_line    0x00000446      0x2cb testmain.o
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str      0x00000000    0x13ca1
+ *(.debug_str)
+ .debug_str     0x00000000     0x2920 init/test_interrupts.o
+ .debug_str     0x00002920     0x2919 init/test_kbd.o
+ .debug_str     0x00005239     0x291b init/test_shell.o
+ .debug_str     0x00007b54     0x291e init/test_syscalls.o
+ .debug_str     0x0000a472     0x2919 init/test_tty.o
+ .debug_str     0x0000cd8b     0x3267 init/test_vga.o
+ .debug_str     0x0000fff2     0x3caf testmain.o
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.debug_addr
+ *(.debug_addr)
+
+.debug_line_str
+ *(.debug_line_str)
+
+.debug_loclists
+ *(.debug_loclists)
+
+.debug_macro    0x00000000      0x166
+ *(.debug_macro)
+ .debug_macro   0x00000000       0x11 init/test_interrupts.o
+ .debug_macro   0x00000011       0x11 init/test_kbd.o
+ .debug_macro   0x00000022       0x11 init/test_shell.o
+ .debug_macro   0x00000033       0x11 init/test_syscalls.o
+ .debug_macro   0x00000044       0x11 init/test_tty.o
+ .debug_macro   0x00000055       0x6f init/test_vga.o
+ .debug_macro   0x000000c4       0xa2 testmain.o
+
+.debug_names
+ *(.debug_names)
+
+.debug_rnglists
+ *(.debug_rnglists)
+
+.debug_str_offsets
+ *(.debug_str_offsets)
+
+.debug_sup
+ *(.debug_sup)
+
+.gnu.attributes
+ *(.gnu.attributes)
+OUTPUT(tests.o elf32-i386)
+
+.debug_macro    0x00000000      0x850
+ .debug_macro   0x00000000      0x850 init/test_interrupts.o
+
+.debug_macro    0x00000000       0x22
+ .debug_macro   0x00000000       0x22 init/test_vga.o
+
+.debug_macro    0x00000000       0x16
+ .debug_macro   0x00000000       0x16 init/test_vga.o
+
+.debug_macro    0x00000000       0x88
+ .debug_macro   0x00000000       0x88 init/test_vga.o
+
+.debug_macro    0x00000000       0x16
+ .debug_macro   0x00000000       0x16 init/test_vga.o
+
+.debug_macro    0x00000000       0x3a
+ .debug_macro   0x00000000       0x3a init/test_vga.o
+
+.debug_macro    0x00000000       0x22
+ .debug_macro   0x00000000       0x22 init/test_vga.o
+
+.debug_macro    0x00000000       0x10
+ .debug_macro   0x00000000       0x10 init/test_vga.o
+
+.debug_macro    0x00000000       0x3b
+ .debug_macro   0x00000000       0x3b init/test_vga.o
+
+.debug_macro    0x00000000      0x1e3
+ .debug_macro   0x00000000      0x1e3 testmain.o
+
+.debug_macro    0x00000000      0x166
+ .debug_macro   0x00000000      0x166 testmain.o
+
+.debug_macro    0x00000000       0x16
+ .debug_macro   0x00000000       0x16 testmain.o
