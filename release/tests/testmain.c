@@ -18,28 +18,28 @@ static  char 	cmd_buf [CMD_BUF_SIZE];
 
 static struct test_case test_cases[] = {
 
-	// { "vga_entry", 				test_vga_entry },
-	// { "vga_cursor", 			test_vga_cursor },
-	// { "vga_entry_overwrite", 	test_vga_entry_overwrite },
-	// { "vga_color", 				test_vga_entry_colors },
-	// { "vga_entry_boundaries", 	test_vga_entry_boundaries },
+	{ "vga_entry", 				test_vga_entry },
+	{ "vga_cursor", 			test_vga_cursor },
+	{ "vga_entry_overwrite", 	test_vga_entry_overwrite },
+	{ "vga_color", 				test_vga_entry_colors },
+	{ "vga_entry_boundaries", 	test_vga_entry_boundaries },
 
-	// { "intr_reg", 				test_intr_reg },
-	// { "intr_unreg", 			test_intr_unreg },
-	// { "intr_multi", 			test_intr_multi },
+	{ "intr_reg", 				test_intr_reg },
+	{ "intr_unreg", 			test_intr_unreg },
+	{ "intr_multi", 			test_intr_multi },
 
 	// { "kbd_basic", 				test_kbd_basic },
 	// { "kbd_multi", 				test_kbd_multi },
 	// { "kbd_capslock", 			test_kbd_capslock },
 	// { "kbd_shift", 				test_kbd_shift },
 
-	// {"terminal_getc", 			test_terminal_getc},
-	// {"terminal_read", 			test_terminal_read},
-	// {"terminal_putc", 			test_terminal_putc},
-	// {"terminal_write", 			test_terminal_write},
-	// {"terminal_cursor", 		test_terminal_cursor},
-	// {"terminal_clear", 			test_terminal_clear},
-	// {"terminal_column", 		test_terminal_column},
+	{"terminal_getc", 			test_terminal_getc},
+	{"terminal_read", 			test_terminal_read},
+	{"terminal_putc", 			test_terminal_putc},
+	{"terminal_write", 			test_terminal_write},
+	{"terminal_cursor", 		test_terminal_cursor},
+	{"terminal_clear", 			test_terminal_clear},
+	{"terminal_column", 		test_terminal_column},
 	
 
 	// {"shell_echo",				test_shell_echo},

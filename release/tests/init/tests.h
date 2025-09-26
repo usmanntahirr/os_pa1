@@ -34,13 +34,13 @@ extern void test_vga_entry_boundaries ();
 
 // // -- TERMINAL TESTS
 
-// extern void test_terminal_getc ();
-// extern void test_terminal_read ();
-// extern void test_terminal_putc ();
-// extern void test_terminal_write ();
-// extern void test_terminal_cursor ();
-// extern void test_terminal_clear ();
-// extern void test_terminal_column ();
+extern void test_terminal_getc ();
+extern void test_terminal_read ();
+extern void test_terminal_putc ();
+extern void test_terminal_write ();
+extern void test_terminal_cursor ();
+extern void test_terminal_clear ();
+extern void test_terminal_column ();
 
 // // -- TERMINAL SYSCALL TESTS
 

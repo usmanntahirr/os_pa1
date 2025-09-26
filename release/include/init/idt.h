@@ -64,6 +64,11 @@
 typedef struct {
 
     /* Add the IDT entry fields here */
+    uint16_t base_low;   // offset bits 0..15
+    uint16_t sel;        // code segment selector in GDT
+    uint8_t  zero;       // always 0
+    uint8_t  flags;      // P|DPL|0|type (e.g., 0x8E)
+    uint16_t base_high;  // offset bits 16..31
 
 } __attribute__((packed)) idt_entry_t;
 
@@ -78,11 +83,8 @@ typedef struct {
  ******************************************************************************/
 typedef struct {
 
-    //! Size of the IDT in bytes
-    uint16_t            limit;
-
-    //! Base address of the IDT
-    uint32_t            base;
+    uint16_t limit;
+    uint32_t base;       // address of first element in idt[]
 
 } __attribute__((packed)) idt_ptr_t;
 
@@ -99,6 +101,6 @@ typedef struct {
  *              instruction.
  * 
 *******************************************************************************/
-void load_idt (uint32_t);
-
+void idt_init(void);
+void idt_set_gate(uint8_t num, uint32_t base, uint16_t sel, uint8_t flags);
 #endif // _IDT_H

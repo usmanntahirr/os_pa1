@@ -24,8 +24,15 @@ void kmain ()
 
 	/* Your implementation starts here */
 
+	idt_init();
+    interrupts_init();
+    interrupts_enable(); 
 
 
+	pic_remap(0x20, 0x28);  // standard remap
+    pic_clear_mask(0);      // PIT (if tests need timer)
+    pic_clear_mask(1);      // Keyboard (if tests need IRQ1)
+    __asm__ __volatile__("sti");
 
 
 
